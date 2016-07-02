@@ -3,10 +3,10 @@ package genericos;
 import java.util.Arrays;
 
 public class ListaStringArray {
-	private int[] array; 
+	private String[] array; 
 	
 	public ListaStringArray(int tamanho){
-		array = new int[tamanho];//creamos el array 
+		array = new String[tamanho];//creamos el array 
 	}
 	
 	/**
@@ -14,7 +14,7 @@ public class ListaStringArray {
 	 * @param posicion - posicion array
 	 * @param elemento - contenido array
 	 */
-	public void addArray(int posicion, int elemento){
+	public void addArray(int posicion, String elemento){
 		if(posicion>=0 && posicion < array.length)//Estamos dentro del rango
 		array[posicion] = elemento; 
 		else 
