@@ -1,12 +1,13 @@
 package genericos;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class ListaArray {
-	private int[] array; 
+public class ListaArray<T> {
+	private T[] array; 
 	
 	public ListaArray(int tamanho){
-		array = new int[tamanho];//creamos el array 
+		array = (T[])new Object[tamanho];//creamos el array 
 	}
 	
 	/**
@@ -14,7 +15,7 @@ public class ListaArray {
 	 * @param posicion - posicion array
 	 * @param elemento - contenido array
 	 */
-	public void addArray(int posicion, int elemento){
+	public void addArray(int posicion, T elemento){
 		if(posicion>=0 && posicion < array.length)//Estamos dentro del rango
 		array[posicion] = elemento; 
 		else 
